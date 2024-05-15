@@ -17,6 +17,8 @@
 12. Blind SQL Injection
 13. Server-Side Template Injection (SSTI)
 
+
+
 ⚡️ Broken Authentication and Session Management:
 14. Session Fixation
 15. Brute Force Attack
