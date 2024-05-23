@@ -17,7 +17,15 @@
               Some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and look for systematic differences in the               application responses.<br>
               Boolean conditions such as OR 1=1 and OR 1=2, and look for differences in the application's responses.<br>
               Payloads designed to trigger time delays when executed within a SQL query, and look for differences in the time taken to respond.<br>
-       
+     * Blind SQL injection vulnerabilities.<br>
+        Ans - Blink SQL Injection is a type of SQL Injection attack where the attacker indirectly discovers information by analyzing server reactions to injected SQL                      queries, even though the injection results are not visible.<br>
+     * Second-order SQL injection.<br>
+        Ans - First-order SQL injection occurs when the application processes user input from an HTTP request and incorporates the input into a SQL query in an unsafe way.<br>
+              Second-order SQL injection occurs when the application takes user input from an HTTP request and stores it for future use. This is usually done by placing the               input into a database, but no vulnerability occurs at the point where the data is stored. Later, when handling a different HTTP request, the application                     retrieves the stored data and incorporates it into a SQL query in an unsafe way. For this reason, second-order SQL injection is also known as stored SQL                     injection.<brr>
+     * How to prevent SQL injection.<br>
+        Ans - Whitelisting permitted input values.<br>
+              Using different logic to deliver the required behavior.<br>
+     
 3. Cross-Site Scripting (XSS)
 4. Cross-Site Request Forgery (CSRF)
 5. Remote Code Execution (RCE)
