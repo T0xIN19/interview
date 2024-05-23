@@ -4,18 +4,32 @@
 
 ⚡️ Injection Vulnerabilities:
 1. SQL Injection (SQLi)
-2. Cross-Site Scripting (XSS)
-3. Cross-Site Request Forgery (CSRF)
-4. Remote Code Execution (RCE)
-5. Command Injection
-6. XML Injection
-7. LDAP Injection
-8. XPath Injection
-9. HTML Injection
-10. Server-Side Includes (SSI) Injection
-11. OS Command Injection
-12. Blind SQL Injection
-13. Server-Side Template Injection (SSTI)
+     * What is SQL injection (SQLi)?<br>
+       Ans - A web security vulnerability that allows an attacker to manupulate the database with the help of quaries.<br>
+     * What is the impact of a successful SQL injection attack?<br>
+       Ans - A successful SQL injection attack can result in unauthorized access to sensitive data, such as:<br>
+             Passwords.<br>
+             Credit card details.<br>
+             Personal user information.<br>
+     * How to detect SQL injection vulnerabilities.<br>
+       Ans - You can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, you would typically submit:<br>
+             The single quote character ' and look for errors or other anomalies.<br>
+              Some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and look for systematic differences in the               application responses.<br>
+              Boolean conditions such as OR 1=1 and OR 1=2, and look for differences in the application's responses.<br>
+              Payloads designed to trigger time delays when executed within a SQL query, and look for differences in the time taken to respond.<br>
+       
+3. Cross-Site Scripting (XSS)
+4. Cross-Site Request Forgery (CSRF)
+5. Remote Code Execution (RCE)
+6. Command Injection
+7. XML Injection
+8. LDAP Injection
+9. XPath Injection
+10. HTML Injection
+11. Server-Side Includes (SSI) Injection
+12. OS Command Injection
+13. Blind SQL Injection
+14. Server-Side Template Injection (SSTI)
 
 
 
