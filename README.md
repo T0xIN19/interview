@@ -45,7 +45,8 @@
       >  Stored XSS, where the malicious script comes from the website's database.<br>
       >  DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.<br>
 
-    
+    * Reflected Xss
+      > Reflected xss accour when an attcker able to send malicious script to the web application using URL or submission & the web application reflect those                        scripts without validation.
        
    
    
