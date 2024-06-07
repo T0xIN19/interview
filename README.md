@@ -4,46 +4,46 @@
 
 ⚡️ Injection Vulnerabilities:
 1. SQL Injection (SQLi)
-     * What is SQL injection (SQLi)?<br>
-       Ans - A web security vulnerability that allows an attacker to manupulate the database with the help of quaries.<br>
+     What is SQL injection (SQLi)?<br>
+      > Ans - A web security vulnerability that allows an attacker to manupulate the database with the help of quaries.<br>
      * What is the impact of a successful SQL injection attack?<br>
-       Ans - A successful SQL injection attack can result in unauthorized access to sensitive data, such as:<br>
-             Passwords.<br>
+       > Ans - A successful SQL injection attack can result in unauthorized access to sensitive data, such as:<br>
+           >  Passwords.<br>
              Credit card details.<br>
              Personal user information.<br>
      * How to detect SQL injection vulnerabilities.<br>
-       Ans - You can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, you would typically submit:<br>
+       > Ans - You can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, you would typically submit:<br>
              The single quote character ' and look for errors or other anomalies.<br>
               Some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and look for systematic differences in the               application responses.<br>
               Boolean conditions such as OR 1=1 and OR 1=2, and look for differences in the application's responses.<br>
               Payloads designed to trigger time delays when executed within a SQL query, and look for differences in the time taken to respond.<br>
      * Blind SQL injection vulnerabilities.<br>
-        Ans - Blink SQL Injection is a type of SQL Injection attack where the attacker indirectly discovers information by analyzing server reactions to injected SQL                      queries, even though the injection results are not visible.<br>
+       > Ans - Blink SQL Injection is a type of SQL Injection attack where the attacker indirectly discovers information by analyzing server reactions to injected SQL                      queries, even though the injection results are not visible.<br>
      * Second-order SQL injection.<br>
-        Ans - First-order SQL injection occurs when the application processes user input from an HTTP request and incorporates the input into a SQL query in an unsafe way.<br>
+       > Ans - First-order SQL injection occurs when the application processes user input from an HTTP request and incorporates the input into a SQL query in an unsafe way.<br>
               Second-order SQL injection occurs when the application takes user input from an HTTP request and stores it for future use. This is usually done by placing the               input into a database, but no vulnerability occurs at the point where the data is stored. Later, when handling a different HTTP request, the application                     retrieves the stored data and incorporates it into a SQL query in an unsafe way. For this reason, second-order SQL injection is also known as stored SQL                     injection.<brr>
      * How to prevent SQL injection.<br>
-        Ans - Whitelisting permitted input values.<br>
+         >   Ans - Whitelisting permitted input values.<br>
               Using different logic to deliver the required behavior.<br>
      
 3. Cross-Site Scripting (XSS)<br>
    * What is cross-site scripting (XSS)?<br>    
-   :-- Xss its client side vulnerability which allow an attcker to inject malicious script into websites.<br>
+      >  Xss its client side vulnerability which allow an attcker to inject malicious script into websites.<br>
 
    * Impact of XSS vulnerabilities<br>
-   `The actual impact of an XSS attack generally depends on the nature of the application, its functionality and data, and the status of the compromised user. For                example:
+      > The actual impact of an XSS attack generally depends on the nature of the application, its functionality and data, and the status of the compromised user. For                example:
 
-        In a brochureware application, where all users are anonymous and all information is public, the impact will often be minimal.<br>
+      > In a brochureware application, where all users are anonymous and all information is public, the impact will often be minimal.<br>
     
-        In an application holding sensitive data, such as banking transactions, emails, or healthcare records, the impact will usually be serious.<br>
+      >  In an application holding sensitive data, such as banking transactions, emails, or healthcare records, the impact will usually be serious.<br>
     
-        If the compromised user has elevated privileges within the application, then the impact will generally be critical, allowing the attacker to take full control of            the vulnerable application and compromise all users and their data.<br>
+      >  If the compromised user has elevated privileges within the application, then the impact will generally be critical, allowing the attacker to take full control of            the vulnerable application and compromise all users and their data.<br>
      
    * What are the types of XSS attacks?<br>
      
-       Reflected XSS, where the malicious script comes from the current HTTP request.<br>
-       Stored XSS, where the malicious script comes from the website's database.<br>
-       DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.<br>
+      >  Reflected XSS, where the malicious script comes from the current HTTP request.<br>
+      >  Stored XSS, where the malicious script comes from the website's database.<br>
+      >  DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.<br>
 
     
        
