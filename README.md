@@ -2,7 +2,7 @@
 
 100 Web Vulnerabilities, categorized into various types : 😀
 
-⚡️ Injection Vulnerabilities:
+## ⚡️ Injection Vulnerabilities:
 1. SQL Injection (SQLi)
      What is SQL injection (SQLi)?<br>
       > Ans - A web security vulnerability that allows an attacker to manupulate the database with the help of quaries.<br>
