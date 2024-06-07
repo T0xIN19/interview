@@ -26,18 +26,40 @@
         Ans - Whitelisting permitted input values.<br>
               Using different logic to deliver the required behavior.<br>
      
-3. Cross-Site Scripting (XSS)
-4. Cross-Site Request Forgery (CSRF)
-5. Remote Code Execution (RCE)
-6. Command Injection
-7. XML Injection
-8. LDAP Injection
-9. XPath Injection
-10. HTML Injection
-11. Server-Side Includes (SSI) Injection
-12. OS Command Injection
-13. Blind SQL Injection
-14. Server-Side Template Injection (SSTI)
+3. Cross-Site Scripting (XSS)<br>
+   * What is cross-site scripting (XSS)?<br>    
+   :-- Xss its client side vulnerability which allow an attcker to inject malicious script into websites.<br>
+
+   * Impact of XSS vulnerabilities<br>
+   `The actual impact of an XSS attack generally depends on the nature of the application, its functionality and data, and the status of the compromised user. For                example:
+
+        In a brochureware application, where all users are anonymous and all information is public, the impact will often be minimal.<br>
+    
+        In an application holding sensitive data, such as banking transactions, emails, or healthcare records, the impact will usually be serious.<br>
+    
+        If the compromised user has elevated privileges within the application, then the impact will generally be critical, allowing the attacker to take full control of            the vulnerable application and compromise all users and their data.<br>
+     
+   * What are the types of XSS attacks?<br>
+     
+       Reflected XSS, where the malicious script comes from the current HTTP request.<br>
+       Stored XSS, where the malicious script comes from the website's database.<br>
+       DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.<br>
+
+    
+       
+   
+   
+5. Cross-Site Request Forgery (CSRF)
+6. Remote Code Execution (RCE)
+7. Command Injection
+8. XML Injection
+9. LDAP Injection
+10. XPath Injection
+11. HTML Injection
+12. Server-Side Includes (SSI) Injection
+13. OS Command Injection
+14. Blind SQL Injection
+15. Server-Side Template Injection (SSTI)
 
 
 
