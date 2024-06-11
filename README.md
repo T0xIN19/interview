@@ -26,7 +26,7 @@
          >   Ans - Whitelisting permitted input values.<br>
               Using different logic to deliver the required behavior.<br>
      
-3. Cross-Site Scripting (XSS)<br>
+2. Cross-Site Scripting (XSS)<br>
    * What is cross-site scripting (XSS)?<br>    
       >  Xss its client side vulnerability which allow an attcker to inject malicious script into websites.<br>
 
@@ -48,6 +48,7 @@
     * Reflected Xss
       > Reflected xss accour when an attcker able to send malicious script to the web application using URL or submission & the web application reflect those                        scripts without validation.<br>
        
+
 3. Authentication vulnerabilities<br>
    > Authentication vulnerabilities can allow attackers to gain access to sensitive data and functionality. They also expose additional attack surface for further                exploits.<br>
    
@@ -75,7 +76,8 @@
           Triple-check your verification logic<br>
           Don't forget supplementary functionality<br>
           Implement proper multi-factor authentication.<br>
-          
+
+
 4. What is path traversal?
    * Path traversal is also known as directory traversal. These vulnerabilities enable an attacker to read arbitrary files on the server that is running an application.<br>
      > Application code and data.<br>
@@ -91,18 +93,25 @@
        > Verify that the canonicalized path starts with the expected base directory.<br>
        > Many application functions that do this can be rewritten to deliver the same behavior in a safer way.<br>
      
-       
-6. Cross-Site Request Forgery (CSRF)
-7. Remote Code Execution (RCE)
-8. Command Injection
-9. XML Injection
-10. LDAP Injection
-11. XPath Injection
-12. HTML Injection
-13. Server-Side Includes (SSI) Injection
-14. OS Command Injection
-15. Blind SQL Injection
-16. Server-Side Template Injection (SSTI)
+
+5. command injection.<br>
+   * What is os command injection?<br>
+     > OS command injection is also known as shell injection. It allows an attacker to execute operating system (OS) commands on the server that is running an application.          <br>
+     Useful commands :
+     * window <br>
+     > 
+
+5. Cross-Site Request Forgery (CSRF)
+6. Remote Code Execution (RCE)
+7. Command Injection
+8. XML Injection
+9. LDAP Injection
+10. XPath Injection
+11. HTML Injection
+12. Server-Side Includes (SSI) Injection
+13. OS Command Injection
+14. Blind SQL Injection
+15. Server-Side Template Injection (SSTI)
 
 
 
