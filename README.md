@@ -97,9 +97,20 @@
 5. command injection.<br>
    * What is os command injection?<br>
      > OS command injection is also known as shell injection. It allows an attacker to execute operating system (OS) commands on the server that is running an application.          <br>
-     Useful commands :
-     * window <br>
-     > 
+     Useful commands : https://github.com/payloadbox/command-injection-payload-list
+
+   * How to prevent OS command injection vulnerabilities in web applications?<br>
+     > Detecting blind OS command injection using time delays.<br>
+     > Exploiting blind OS command injection by redirecting output.<br>
+     Exploiting blind OS command injection using out-of-band (OAST) techniques.<br>
+     
+   
+   * How to prevent OS command injection vulnerabilities in web applications?<br>
+     > Using input sanitization to prevent command injection.<br>
+       Using character escaping to prevent command injection.<br>
+       Using blacklists to prevent command injection.<br>
+       
+6. 
 
 5. Cross-Site Request Forgery (CSRF)
 6. Remote Code Execution (RCE)
