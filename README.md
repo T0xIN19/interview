@@ -76,19 +76,33 @@
           Don't forget supplementary functionality<br>
           Implement proper multi-factor authentication.<br>
           
-          
-                     
-5. Cross-Site Request Forgery (CSRF)
-6. Remote Code Execution (RCE)
-7. Command Injection
-8. XML Injection
-9. LDAP Injection
-10. XPath Injection
-11. HTML Injection
-12. Server-Side Includes (SSI) Injection
-13. OS Command Injection
-14. Blind SQL Injection
-15. Server-Side Template Injection (SSTI)
+4. What is path traversal?
+   * Path traversal is also known as directory traversal. These vulnerabilities enable an attacker to read arbitrary files on the server that is running an application.<br>
+     > Application code and data.<br>
+        Credentials for back-end systems.<br>
+        Sensitive operating system files.<br>
+
+      > ex- %2e%2e%2f represents ../ - encoding & double encoding <br>
+            ..%c0%af represents ../  -  percent URL encoding <br>
+            ?file=secret.doc%00.pdf - null byte <br>
+
+     * How to prevent a path traversal attack.<br>
+       > verify that the input contains only permitted content, such as alphanumeric characters only.<br>
+       > Verify that the canonicalized path starts with the expected base directory.<br>
+       > Many application functions that do this can be rewritten to deliver the same behavior in a safer way.<br>
+     
+       
+6. Cross-Site Request Forgery (CSRF)
+7. Remote Code Execution (RCE)
+8. Command Injection
+9. XML Injection
+10. LDAP Injection
+11. XPath Injection
+12. HTML Injection
+13. Server-Side Includes (SSI) Injection
+14. OS Command Injection
+15. Blind SQL Injection
+16. Server-Side Template Injection (SSTI)
 
 
 
