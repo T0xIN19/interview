@@ -46,10 +46,38 @@
       >  DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.<br>
 
     * Reflected Xss
-      > Reflected xss accour when an attcker able to send malicious script to the web application using URL or submission & the web application reflect those                        scripts without validation.
+      > Reflected xss accour when an attcker able to send malicious script to the web application using URL or submission & the web application reflect those                        scripts without validation.<br>
        
+3. Authentication vulnerabilities<br>
+   * Authentication vulnerabilities can allow attackers to gain access to sensitive data and functionality. They also expose additional attack surface for further                exploits.<br>
    
-   
+       > What is authentication? <br>
+          ANS - Authentication is the process of verifying the identity of a user or client.<br>
+                     Something you know, such as a password or the answer to a security question. These are sometimes called "knowledge factors".<br>
+                     Something you have, This is a physical object such as a mobile phone or security token. These are sometimes called "possession factors".<br>
+                     Something you are or do. For example, your biometrics or patterns of behavior. These are sometimes called "inherence factors".<br>
+                     
+       > What is the difference between authentication and authorization?<br>
+                     Authentication is the process of verifying that a user is who they claim to be.<BR>
+                     Authorization involves verifying whether a user is allowed to do something.<BR>
+
+     For example, authentication determines whether someone attempting to access a website with the username Carlos123 really is the same person who created the account.
+
+     > How do authentication vulnerabilities arise? <br> 
+           The authentication mechanisms are weak because they fail to adequately protect against brute-force attacks.<br>
+           Logic flaws or poor coding in the implementation allow the authentication mechanisms to be bypassed entirely by an attacker. This is sometimes called "broken                authentication".<br>
+
+     > How to secure your authentication mechanisms.<br>
+          Take care with user credentials - SOLID CREDENTIALS<br>
+          Don't count on users for security. - require some additional effort from your users.<br>
+          Prevent username enumeration - NOT  reveal that a user exists on the system.<br>
+          Implement robust brute-force protection -  implement strict, IP-based user rate limiting. This should involve measures to prevent attackers from manipulating                their apparent.<BR>
+          Triple-check your verification logic<br>
+          Don't forget supplementary functionality<br>
+          Implement proper multi-factor authentication.<br>
+          
+          
+                     
 5. Cross-Site Request Forgery (CSRF)
 6. Remote Code Execution (RCE)
 7. Command Injection
