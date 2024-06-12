@@ -661,5 +661,3 @@ A brute force attack (also known as brute force cracking), is a popular cracking
     
 ---
 
-## Additional Tips
-![image](https://github.com/m14r41/CyberSecurity-Interview/assets/95265573/7095e6eb-f95f-4a94-939a-f503d7ef3631)
