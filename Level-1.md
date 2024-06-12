@@ -4,16 +4,6 @@ The content presented here does not belong to me in any way. It is a compilation
 **Note:**
 Based on my personal experience, the following list comprises some commonly encountered interview questions. However, I cannot guarantee that interview questions will be 100% derived from this repository.
 
----
-**This is based my personal experiance:**
-
-| S.N | Profile | Level  | Description | Link |
-|-----|---------|--------|-------------|------|
-| 1   | VAPT    | Level 1| **-** Owasp, Port and services, IP and Mac, Encription, Hashing, Common vulnerability <br> **-** For freshers and experiance | [Click Here](https://github.com/m14r41/CyberSecurity-Interview/tree/main) |
-| 2   | VAPT    | Level 2| **-** Dedicated for Experiance Pentester <br> **-** Web, Mobile, API, Thick Client, SAST etc | [Click Here](https://github.com/m14r41/CyberSecurity-Interview/blob/main/Interview-Level-2.md) |
-
-
-
 
 ---
 # **Level 1:** 
