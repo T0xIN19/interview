@@ -99,7 +99,7 @@
      > OS command injection is also known as shell injection. It allows an attacker to execute operating system (OS) commands on the server that is running an application.          <br>
      Useful commands : https://github.com/payloadbox/command-injection-payload-list
 
-   * How to prevent OS command injection vulnerabilities in web applications?<br>
+   * How to find OS command injection vulnerabilities in web applications?<br>
      > Detecting blind OS command injection using time delays.<br>
      > Exploiting blind OS command injection by redirecting output.<br>
      Exploiting blind OS command injection using out-of-band (OAST) techniques.<br>
@@ -110,7 +110,27 @@
        Using character escaping to prevent command injection.<br>
        Using blacklists to prevent command injection.<br>
        
-6. 
+6. Business logic vulnerabilities<br>
+     * Business logic vulnerabilities are flaws in the design & This potentially enables attackers to manipulate legitimate functionality to achieve a malicious goal.<br>
+       * How do business logic vulnerabilities arise? <br>
+       > Business logic vulnerabilities often arise because the design and development teams make flawed assumptions about how users will interact with the application.                These           bad assumptions can lead to inadequate validation of user input. For example, if the developers assume that users will pass data exclusively via                a web browser,              the application may rely entirely on weak client-side controls to validate input. These are easily bypassed by an attacker using                an intercepting proxy.<br>
+       
+       * What is the impact of business logic vulnerabilities?<br>
+       > Fundamentally, the impact of any logic flaw depends on what functionality it is related to. If the flaw is in the authentication mechanism, for example, this could have a serious impact on your overall security. Attackers could potentially exploit this for privilege escalation, or to bypass authentication entirely, gaining access to sensitive data and functionality. This also exposes an increased attack surface for other exploits.<br>
+
+       * How to prevent business logic vulnerabilities.<br>
+            > Make sure developers and testers understand the domain that the application serves.<br>
+            > Avoid making implicit assumptions about user behavior or the behavior of other parts of the application.<br>
+            > Maintain clear design documents and data flows for all transactions and workflows, noting any assumptions that are made at each stage.<br>
+            > Write code as clearly as possible. If it's difficult to understand what is supposed to happen, it will be difficult to spot any logic flaws.<br>
+            > Note any references to other code that uses each component. Think about any side-effects of these dependencies if a malicious party were to manipulate them in an unusual way.<br>
+
+
+      
+
+       
+
+
 
 5. Cross-Site Request Forgery (CSRF)
 6. Remote Code Execution (RCE)
