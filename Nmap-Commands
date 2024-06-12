@@ -1,0 +1,41 @@
+# Scan a Range of IP Address: To scan a range of IP addresses, the Nmap command is as follows:
+   nmap 192.168.1.1-24
+
+## Port Scanning: 
+    nmap -p T:80 192.168.1.1
+
+To scan UDP port 53:
+    nmap -p U:53 192.168.1.1
+
+To scan the range of ports:
+    nmap -p 80-160 192.168.1.1
+
+## Ping Scan Using Nmap:
+  nmap -sP 192.168.1.1/20
+
+## Saving the Nmap Scan Output to a File:
+  nmap 192.168.1.1 > op.txt
+  nmap -oN /temp/files/output/ 192.168.1.1
+  nmap -oN op.txt 192.168.1.1
+
+## Most Popular Ports Scanning:  stealthy scan
+  nmap -sS 192.168.1.1
+
+## OS fingerprinting
+  nmap -sT 192.168.1.1
+
+## Display Open Ports:
+  nmap –open 192.168.1.1
+  nmap –open server2.gl.biz
+  nmap –open 192.168.0.1
+
+## Exclude Host/ IP Addresses for the Scan:
+  nmap 192.168.1.1-24 –exclude 192.168.1.4
+  nmap 192. 168.1.1-24 –exclude 192.168.1.3, 192.168.1.7
+
+## Service Version Detection: 
+  nmap -A 192.168.1.254
+or
+  nmap -v -A 192.168.1.1
+or
+  nmap -A -iL /user/temp/list.txt
