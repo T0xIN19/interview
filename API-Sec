@@ -1,0 +1,21 @@
+# 🔐 API Security Checklist
+
+> ✨ A comprehensive guide to identifying and mitigating common API security vulnerabilities — with test cases, impacts, and practical mitigations.
+
+![Security](https://img.shields.io/badge/security-api-blue)
+![OWASP Top 10](https://img.shields.io/badge/OWASP-Top%2010-important)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
+![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)
+
+---
+
+## 📊 Vulnerability Matrix
+
+| 🔢  | Vulnerability                                | 🔍 Test Cases                                                                        | 💥 Impact                                         | 🛡️ Mitigation                                                                     |
+| --- | -------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 1️⃣ | **Broken Authentication**                    | - Brute-force login endpoints<br>- Use invalid/expired tokens<br>- Replay old tokens | - Account takeover<br>- Unauthorized access       | - Implement **MFA**<br>- Apply **rate limiting**<br>- Enforce **token expiration** |
+| 2️⃣ | **Broken Object Level Authorization (BOLA)** | - Modify object ID in request (`/user/123` → `/user/124`)                            | - Access to other users' data                     | - Enforce object-level access checks<br>- Use UUIDs                                |
+| 3️⃣ | **Excessive Data Exposure**                  | - Analyze API responses<br>- Use tools like **Burp Suite**, **OWASP ZAP**            | - Sensitive/internal data leakage                 | - Filter server-side responses<br>- Avoid exposing internal fields                 |
+| 4️⃣ | **Lack of Rate Limiting**                    | - Send rapid/bulk requests (e.g., DoS, brute-force)                                  | - Service unavailability<br>- Brute-force success | - Apply rate limiting per IP/token<br>- Monitor for abuse patterns                 |
+| 5️⃣ | **Mass Assignment**                          | - Inject unexpected fields (`isAdmin=true`)                                          | - Privilege escalation<br>- Unauthorized access   | - Use whitelisting for fields<br>- Validate request schema                         |
+| 6️⃣ | **Injection Attacks (SQL, NoSQL, Command)**  | - Test payloads like `' OR '1'='1`<br>- Use tools: **sqlmap**, **NoSQLMap**          | - Data breach<br>- C                              |                                                                                    |
