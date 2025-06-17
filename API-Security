@@ -1,12 +1,51 @@
-| **#** | **Vulnerability**                            | **Test Cases**                                                                       | **Impact**                                      | **Mitigation**                                                          |
-| ----- | -------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------- | ----------------------------------------------------------------------- |
-| 1️⃣   | **Broken Authentication**                    | - Brute force login endpoints<br>- Use invalid/expired tokens<br>- Replay old tokens | - Account takeover<br>- Unauthorized access     | - Implement MFA<br>- Rate limiting<br>- Token expiration                |
-| 2️⃣   | **Broken Object Level Authorization (BOLA)** | - Modify object ID in API request (e.g., `/user/123` → `/user/124`)                  | - Access to other users' data                   | - Enforce access checks on object IDs<br>- Use UUIDs                    |
-| 3️⃣   | **Excessive Data Exposure**                  | - Observe API responses for extra fields<br>- Use tools like Burp/OWASP ZAP          | - Leakage of sensitive data                     | - Filter response data at the server<br>- Avoid sending internal fields |
-| 4️⃣   | **Lack of Rate Limiting**                    | - Send a high number of requests (brute force, DoS)                                  | - Account lockout<br>- System overload          | - Apply rate limiting per IP/token<br>- Monitor logs                    |
-| 5️⃣   | **Mass Assignment**                          | - Add unexpected parameters (e.g., `isAdmin=true`)                                   | - Unauthorized access<br>- Privilege escalation | - Whitelist properties<br>- Validate input schema                       |
-| 6️⃣   | **Injection (SQL, NoSQL, Command)**          | - Input payloads like `' OR '1'='1`<br>- Use tools: sqlmap, NoSQLMap                 | - Data theft<br>- System compromise             | - Use parameterized queries<br>- Input sanitization                     |
-| 7️⃣   | **Improper Assets Management**               | - Access `/v1`, `/v2`, `/dev`, `/beta` endpoints<br>- Check for outdated APIs        | - Access to unpatched or test APIs              | - Maintain updated inventory<br>- Remove unused endpoints               |
-| 8️⃣   | **Security Misconfiguration**                | - Test with default creds, verbose errors<br>- Access `/admin`, `/debug` endpoints   | - Full system compromise                        | - Harden server<br>- Use secure headers<br>- Disable debug mode         |
-| 9️⃣   | **Insecure Data Storage/Transmission**       | - Observe for HTTP endpoints<br>- Inspect for hardcoded secrets                      | - Data theft in transit<br>- Credential leakage | - Use HTTPS<br>- Encrypt sensitive data at rest                         |
-| 🔟    | **Insufficient Logging & Monitoring**        | - Perform an attack and check logs<br>- Attempt privilege escalation                 | - Breach goes undetected                        | - Centralize logging<br>- Set up alerts                                 |
+# 🔐 API Security Checklist
+
+A comprehensive list of common API vulnerabilities along with test cases, impacts, and mitigation strategies. This can be used as a guide for secure API development, testing, and security assessments.
+
+---
+
+## 📋 Vulnerability Matrix
+
+| #️⃣ | Vulnerability | Test Cases | Impact | Mitigation |
+|---|----------------|------------|--------|------------|
+| 1️⃣ | **Broken Authentication** | - Brute-force login endpoints<br>- Use invalid/expired tokens<br>- Replay old tokens | - Account takeover<br>- Unauthorized access | - Implement MFA<br>- Apply rate limiting<br>- Token expiration |
+| 2️⃣ | **Broken Object Level Authorization (BOLA)** | - Modify object ID in API request (e.g., `/user/123` → `/user/124`) | - Access to other users' data | - Enforce object-level access control<br>- Use UUIDs for object references |
+| 3️⃣ | **Excessive Data Exposure** | - Observe API responses for extra/unintended fields<br>- Use tools like Burp Suite / OWASP ZAP | - Sensitive data leakage | - Filter response data at the server<br>- Avoid exposing internal fields |
+| 4️⃣ | **Lack of Rate Limiting** | - Send a large number of requests (DoS or brute-force style) | - Service outage<br>- Credential brute force | - Apply rate limiting per IP or token<br>- Monitor and alert on abnormal activity |
+| 5️⃣ | **Mass Assignment** | - Add unexpected parameters to requests (e.g., `isAdmin=true`) | - Unauthorized access<br>- Privilege escalation | - Use allow-lists for request parameters<br>- Validate input schema |
+| 6️⃣ | **Injection (SQL, NoSQL, Command)** | - Input payloads like `' OR '1'='1`<br>- Use tools: sqlmap, NoSQLMap | - Data breach<br>- Command execution | - Use parameterized queries<br>- Input validation/sanitization |
+| 7️⃣ | **Improper Assets Management** | - Access hidden endpoints (`/dev`, `/v1`, `/beta`, etc.)<br>- Identify deprecated APIs | - Access to test/unmaintained endpoints | - Maintain updated API inventory<br>- Remove or restrict unused endpoints |
+| 8️⃣ | **Security Misconfiguration** | - Use default credentials<br>- Access verbose error messages<br>- Try endpoints like `/admin` or `/debug` | - System compromise | - Disable debug mode<br>- Use secure HTTP headers<br>- Harden configurations |
+| 9️⃣ | **Insecure Data Storage/Transmission** | - Inspect HTTP traffic for plaintext data<br>- Look for hardcoded secrets in APIs | - Credential exposure<br>- Sensitive data leakage | - Enforce HTTPS<br>- Encrypt data at rest and in transit |
+| 🔟 | **Insufficient Logging & Monitoring** | - Perform simulated attacks and check logging coverage<br>- Test alerting mechanisms | - Breaches go undetected | - Implement centralized logging<br>- Configure real-time alerts and dashboards |
+
+---
+
+## 📌 Usage
+
+This table is ideal for:
+
+- ✅ Penetration testers conducting API assessments
+- ✅ Security teams creating API test plans
+- ✅ Developers reviewing API designs for secure patterns
+- ✅ Auditors and compliance checks
+
+---
+
+## 📚 References
+
+- [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+- [API Security Testing Guide - PortSwigger](https://portswigger.net/web-security/api)
+
+---
+
+## 🙌 Contributions
+
+Feel free to submit a pull request or open an issue if you'd like to expand this checklist!
+
+---
+
+## 📄 License
+
+MIT License
