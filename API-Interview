@@ -1,12 +1,23 @@
-api-security-owasp-top-10-guide/
-│
-├── README.md
-├── docs/
-│   ├── OWASP_API_Top10.md
-│   ├── API_Vulnerabilities.md
-│   ├── Mitigation_Strategies.md
-│   ├── Interview_Questions.md
-│   └── Examples.md
-├── assets/
-│   └── diagrams/   (Optional: Diagrams/images)
-└── LICENSE         (e.g., MIT or Apache 2.0)
+# OWASP API Security Top 10 Guide
+
+This repository provides a comprehensive guide on the OWASP API Security Top 10 (2023), types of API vulnerabilities, mitigations, interview questions, and examples for practical understanding.
+
+## 📌 Contents
+
+- OWASP Top 10 Explained
+- Types of API Vulnerabilities
+- Mitigation Techniques
+- Advanced Interview Q&A
+- Vulnerability Examples
+
+## 📚 About
+
+Ideal for:
+- Penetration Testers
+- Security Analysts
+- API Developers
+- Bug Bounty Hunters
+
+## 📄 License
+
+This project is licensed under the MIT License.
