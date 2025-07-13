@@ -1,23 +1,78 @@
-# OWASP API Security Top 10 Guide
+# 🔐 OWASP API Security Top 10 – Full Guide
 
-This repository provides a comprehensive guide on the OWASP API Security Top 10 (2023), types of API vulnerabilities, mitigations, interview questions, and examples for practical understanding.
+<p align="center">
+  <img src="https://img.shields.io/badge/API%20Security-OWASP%20Top%2010-blueviolet?style=for-the-badge&logo=github" alt="OWASP API Security Badge"/>
+</p>
 
-## 📌 Contents
+This repository is a comprehensive guide to the **OWASP API Security Top 10 (2023)**, covering common API vulnerabilities, real-world examples, mitigation strategies, and advanced interview questions.
 
-- OWASP Top 10 Explained
-- Types of API Vulnerabilities
-- Mitigation Techniques
-- Advanced Interview Q&A
-- Vulnerability Examples
+---
 
-## 📚 About
+## 📖 Table of Contents
 
-Ideal for:
-- Penetration Testers
-- Security Analysts
-- API Developers
-- Bug Bounty Hunters
+- [📌 OWASP API Security Top 10 (2023)](#-owasp-api-security-top-10-2023)
+- [🧨 Types of API Vulnerabilities](#-types-of-api-vulnerabilities)
+- [🛡️ Mitigation Strategies](#️-mitigation-strategies)
+- [🧪 Vulnerability Examples](#-vulnerability-examples)
+- [💬 Advanced Interview Questions](#-advanced-interview-questions)
+- [📚 Tools for API Testing](#-tools-for-api-testing)
+- [📄 License](#-license)
 
-## 📄 License
+---
 
-This project is licensed under the MIT License.
+## 📌 OWASP API Security Top 10 (2023)
+
+| Rank | Vulnerability                            | Description |
+|------|------------------------------------------|-------------|
+| API1 | **Broken Object Level Authorization (BOLA)** | Unauthorized access to other users’ resources by manipulating object IDs. |
+| API2 | **Broken Authentication**                 | Poor token handling, weak session controls, or credential brute-force possibilities. |
+| API3 | **Broken Object Property Level Authorization** | Sensitive properties exposed due to lack of field-level access controls. |
+| API4 | **Unrestricted Resource Consumption**     | API allows excessive use of CPU, memory, or other resources, leading to DoS. |
+| API5 | **Broken Function Level Authorization**   | Users can invoke high-privilege functions without role validation. |
+| API6 | **Unrestricted Access to Business Flows** | Business-critical operations like payments can be automated or abused. |
+| API7 | **Server-Side Request Forgery (SSRF)**    | API fetches user-supplied URLs without validation, allowing internal network access. |
+| API8 | **Security Misconfiguration**             | Poor headers, verbose errors, open ports, or debug mode in production. |
+| API9 | **Improper Inventory Management**         | Old versions, undocumented, or shadow APIs are exposed. |
+| API10| **Unsafe Consumption of APIs**            | Trusting third-party APIs without validation, leading to injection or logic flaws. |
+
+---
+
+## 🧨 Types of API Vulnerabilities
+
+- Insecure Direct Object References (IDOR)
+- Token Leakage / JWT Mismanagement
+- Mass Assignment
+- Lack of Rate Limiting
+- Broken OAuth Implementation
+- SSRF via URL Fetch APIs
+- CORS Misconfiguration
+- Excessive Data Exposure
+- Insecure API Versioning
+- GraphQL-specific flaws (Introspection, Batching)
+
+---
+
+## 🛡️ Mitigation Strategies
+
+| Vulnerability                      | Mitigation |
+|----------------------------------|------------|
+| **BOLA**                         | Enforce object ownership checks on server side. |
+| **Broken Authentication**        | Use strong passwords, MFA, rotate secrets, short token lifetimes. |
+| **Property-Level Authorization** | Enforce field filtering on server, don’t rely on frontend. |
+| **Resource Consumption**         | Implement rate limiting, pagination, and quotas. |
+| **Function Level Authorization** | Role-based access control (RBAC) or attribute-based access control (ABAC). |
+| **Sensitive Flows**              | Use CAPTCHA, bot detection, and monitoring on critical endpoints. |
+| **SSRF**                         | Allow-list external domains, validate URLs, block internal IP ranges. |
+| **Misconfiguration**             | Disable debug, hide errors, restrict HTTP methods, secure headers. |
+| **Inventory Management**         | Maintain API documentation, versioning, and block unused endpoints. |
+| **Unsafe API Consumption**       | Sanitize all inputs/outputs, apply schema validation, limit trust scope. |
+
+---
+
+## 🧪 Vulnerability Examples
+
+### 🔹 **Broken Object Level Authorization**
+```http
+GET /api/user/102/profile
+Authorization: Bearer valid-token
+# If attacker can access another user's data -> BOLA
